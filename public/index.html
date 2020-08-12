@@ -2,10 +2,64 @@
 <html>
 <head>
   <title> 'Trip Planner' </title>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="style.css">
-  <script src="bundle.js"></script>
+  <script src="bundle.js" defer></script>
 </head>
 <body>
-  <div id="map"></div>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <div class="map-container">
+    <div id="map"></div>
+    <div id="sidebar">
+      <div id="options">
+        <h3>Hotels</h3>
+        <select name="hotels">
+          <option value="">Select a Hotel</option>
+          <option value="hot1">Hotel 1</option>
+          <option value="hot2">Hotel 2</option>
+          <option value="hot3">Hotel 3</option>
+        </select> <div class="button">x</div>
+        <h3>Restaurants</h3>
+        <select name="restaurants">
+          <option value="">Select Restaurants</option>
+          <option value="restt1">Restaurant 1</option>
+          <option value="rest2">Restaurant 2</option>
+          <option value="res3">Restaurant 3</option>
+        </select> <div class="button">x</div>
+        <h3>Activities</h3>
+        <select name="activities">
+          <option value="">Select Activities</option>
+          <option value="act1">Activity 1</option>
+          <option value="act2">Activity 2</option>
+          <option value="act3">Activity 3</option>
+        </select> <div class="button">x</div>
+      </div>
+      <div id="itinerary">
+        <h2>My Itinerary:</h2>
+        <h3>My Hotel</h3>
+        <ul>
+          <li>Stop 1 <div class="button">x</div> </li>
+        </ul>
+        <h3>My Restaurants</h3>
+        <ul>
+          <li>Stop 1 <div class="button">x</div> </li>
+          <li>Stop 2 <div class="button">x</div> </li>
+          <li>Stop 3 <div class="button">x</div> </li>
+        </ul>
+        <h3>My Activities</h3>
+        <ul>
+          <li>Stop 1 <div class="button">x</div> </li>
+          <li>Stop 2 <div class="button">x</div> </li>
+          <li>Stop 3 <div class="button">x</div> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

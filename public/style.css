@@ -6,4 +6,104 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #C1B5AD;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+header {
+  background: #545F66;
+  padding: 1em;
+}
+
+header a {
+  font: 4em;
+  color: white;
+  text-decoration: none;
+  padding: 0 2.5em;
+}
+
+header a:hover {
+  color: #d0f4ea;
+}
+
+#map {
+  height: 100vh;
+  width: 85vw;
+}
+
+.marker {
+  width: 32px;
+  height: 39px;
+}
+
+.hotel {
+  background-image: url(http://i.imgur.com/D9574Cu.png)
+}
+
+.restaurant {
+  background-image: url(http://i.imgur.com/cqR6pUI.png)
+}
+
+.activity, .home {
+  background-image: url(http://i.imgur.com/WbMOfMl.png)
+}
+
+.map-container {
+  display: flex;
+
+}
+
+#sidebar {
+  /* width: 15%; */
+  background: #829399;
+  padding: 1em;
+  overflow: scroll;
+  height: 100vh;
+}
+
+#options {
+ border-bottom: solid 1px #e8fcc2;
+ padding-bottom: 2em;
+ width: inherit;
+}
+
+
+#itinerary {
+  width: inherit;
+}
+
+.button {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background: #d0f4ea;
+  text-align: center;
+  margin: .1em;
+  transition: background .5s;
+  color:#545f66;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #8fb6ab;
+  /* transition: 1s; */
+}
+
+@media (max-width: 700px) {
+  body, .map-container {
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  #map {
+    height: 40%;
+  }
+
+  #map, .map-container, header, #sidebar {
+    width: 100%;
+  }
+
+  #sidebar {
+    overflow: visible;
+  }
 }
